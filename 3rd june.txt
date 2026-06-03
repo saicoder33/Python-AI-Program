@@ -1,0 +1,29 @@
+"Notes of 3rd June 2026"
+# AI : Ability of machines to perceive,learn,reason and make decisions
+DATA: Fuel of AI
+"AI models learrn patterns from data"
+GARBAGE IN AND GARBAGE OUT CONCEPTS
+Structured Data: Data stored in the form of tables and structures
+Unstructured Data: Data that is not structured manner
+.
+.
+What is Machine Learning: Subst of AI
+DEEP LEARNING -> MACHINE LEARNING -> MACHINE LEARNING
+.
+.
+How Machine Learning Works : COLLECT -> CLEAN -> TRAIN -> TEST -> PREDICT
+.
+.
+What is LLM: LLM are AI systems trained on massive tet datasets to understand and generate human language
+text is split into tokes , the models predictss the next token using billions of parameters
+ex: chatgpt, gemini,claude
+ML vs LLM
+.
+.
+Why PYTHON for AI
+.
+.
+NumPy, Pandas & Matplotlib
+What are libraries and packages
+-> library is a collection of pre-wriiten codes that are used to simplify work
+ex: numpy,pandas, etc
