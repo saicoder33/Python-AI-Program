@@ -18,7 +18,7 @@ Scikit-learn :It is used to make predictions on data.
      8)Model Evaluation    ( mean_absolute_error, mean_squared_error, r2_score etc. are used to evaluate the performance of the model)
      9)Predict for new data( model.predict(new_data) -> used to make predictions on new, unseen data)
 
-1     
+   
 
 '''
 
@@ -73,7 +73,7 @@ Scikit-learn :It is used to make predictions on data.
 # print("Equation of the line: Y =", model.coef_[0], "* X +", model.intercept_)
 
 '''
-1)Linear regression : Preicts a continuous numeric value
+1)Linear regression : Preedicts a continuous numeric value
     Real-life example :
     Predicting house price based on area
     formula : Y = mX + b
@@ -117,7 +117,7 @@ print("Predicted salary for age 32 is:", model.predict([[32000]]))
 
 '''
 
-from sklearn.linear_model import LogisticRegression
+# from sklearn.linear_model import LogisticRegression
 '''import numpy as np
 X = np.array([[1], [2], [3], [4], [5]])
 Y = np.array([0, 0, 0, 1, 1]) 
@@ -228,3 +228,105 @@ model = SVC()
 model.fit(X, y)
 print(model.predict([[6]]))
 '''
+
+
+'''
+7)Naive Bayes : Uses probability 
+Real-life example : Spam detection where words like "free", "win", "prize" are more likely to be in spam emails
+'''
+# from sklearn.naive_bayes import GaussianNB
+'''X = [[1],[2],[3],[8],[9],[10]]
+y = [0, 0, 0, 1, 1, 1]
+model = GaussianNB()
+model.fit(X, y)
+print(model.predict([[6]]))
+'''
+#Spam detection
+# X = [[1],[2],[3],[8],[9],[10]]
+# y= ['Not Spam','Not Spam','Not Spam','Spam','Spam','Spam']
+# model = GaussianNB()
+# model.fit(X,y)
+# print(model.predict([[6]]))
+
+#weather -> play cricket or not
+'''temperature = [[30],[35],[40],[45],[50]]
+play = ['Play','Play','Play','Not to play','Not to play']
+model = GaussianNB()
+model.fit(temperature,play)
+print(model.predict([[20]]))'''
+
+#Exam result prediction based on marks
+'''marks = [[50],[60],[70],[80],[90]]
+result = ['Fail','Fail','Pass','Pass','Pass']
+model = GaussianNB()
+model.fit(marks,result)
+print(model.predict([[66]]))'''
+
+'''
+8)K-Means Clustering : Groups similar data ..we only have or take input data and it groups the data into clusters based on similarity
+K-Means finds the best way to divide the data into 2 groups(clusters)
+labels_ -> It is an attribute (stored result based after training)
+Real-life example : Customer segmentation based on purchasing behavior
+'''
+# from sklearn.cluster import KMeans
+# X = [[1], [2], [3], [8], [9], [10]]
+# model = KMeans(n_clusters=2)
+# model.fit(X)
+# print(model.labels_)
+
+#Student narks group
+# marks = [[50],[60],[70],[80],[90]]
+# model = KMeans(n_clusters=2)
+# model.fit(marks)
+# print(model.labels_)
+
+
+'''
+9)DBSCAN : Density-Based Spatial Clustering of Applications with Noise
+Creates clusters automatically and identifies ouliers
+Real-life example:Detecting unusal trasactions in banking data
+'''
+# from sklearn.cluster import DBSCAN
+# X = [[1], [2], [3], [10], [11], [50]]
+# model = DBSCAN(eps=3)
+# model.fit(X)
+# print(model.labels_)
+
+#Student marks
+# marks =[[30],[32],[35],[40],[45],[50],[100]]
+# model = DBSCAN(eps=5)
+# model.fit(marks)
+# print(model.labels_)
+
+'''
+10)Principal Component Analysis:Reduces features while keeping important information
+Real life example: 100 columns -> reduce to 10 columns
+
+'''
+from sklearn.decomposition import PCA
+import numpy as np
+# X = np.random.rand(100,10)
+# pca = PCA(n_components=2)
+# result = pca.fit_transform(X)
+# pca.fit_transform(X)
+# print(result.shape)
+
+#Example : 5 feature -> 2 features
+# X = np.array([
+#     [1, 2, 3, 4, 5],
+#     [2, 3, 4, 5, 6],
+#     [3, 4, 5, 6, 7]
+# ])
+# pca = PCA(n_components=2)
+# result = pca.fit_transform(X)
+# print(result.shape)
+
+#Student dataset
+X = np.array([
+    [50, 60, 70, 80, 90],  
+    [60, 70, 80, 90, 100],
+    [70, 80, 90, 100, 110]
+])
+pca = PCA(n_components=2)
+result = pca.fit_transform(X)
+print(result.shape)
