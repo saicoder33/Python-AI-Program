@@ -75,12 +75,12 @@ arr=np.zeros(5)
 print(arr)
 '''
 
-'''
-wap by using arrange function
+
+#wap by using arrange function
 import numpy as np
 arr=np.arange(1,11) #start,stop,step
 print(arr)
-'''
+
 
 
 
